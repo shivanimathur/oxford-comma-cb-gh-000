@@ -8,7 +8,8 @@ def oxford_comma(array)
     return ((array[0]..array[size - 1]).to_a).push(" and #{array[size]}")
 
   elsif array.size > 3
-    array.join(,)
+    size = array.size
+    return ((array[0]..array[size - 1]).to_a).push(" and #{array[size]}")
 
   end
 end
