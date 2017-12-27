@@ -4,7 +4,12 @@ def oxford_comma(array)
   elsif array.size == 2
     return array.join(" and ")
   elsif array.size == 3
-    (array[0]..array[-1]).to_a
+    size = array.size
+    index = (0..size-2).to_a
+    index.each do |index|
+      array[index] = "#{array[index], }"
+    end
+    array[size-1] = "and #{array[size-1]}"
 
   elsif array.size > 3
 
