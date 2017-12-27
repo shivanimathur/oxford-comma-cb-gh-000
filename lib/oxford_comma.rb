@@ -10,7 +10,7 @@ def oxford_comma(array)
       array[index] = "#{array[index], }"
     end
     array[size-1] = "and #{array[size-1]}"
-
+    return array
   elsif array.size > 3
 
 
